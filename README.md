@@ -1,5 +1,5 @@
 # LE MOT DU JOUR
-Donner votre définition du mot du jour.
+Give your definition of the word of the day.
 
 ## First use
 Install necessary node modules
