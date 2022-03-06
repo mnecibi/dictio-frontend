@@ -1,0 +1,35 @@
+{
+  "name": "lemotdujour",
+  "version": "1.0.0",
+  "description": "Donner votre définition du mot du jour.",
+  "main": "sketch.js",
+  "scripts": {
+    "start": "live-server",
+    "dev": "watchify sketch.js -p esmify -o index.js",
+    "build": "browserify sketch.js -p esmify -o index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mnecibi/lemotdujour.git"
+  },
+  "keywords": [
+    "definition",
+    "wordoftheday",
+    "js",
+    "lemotdujour"
+  ],
+  "author": "mnecibi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnecibi/lemotdujour/issues"
+  },
+  "homepage": "https://github.com/mnecibi/lemotdujour#readme",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "eslint": "^8.10.0",
+    "watchify": "^4.0.0"
+  },
+  "devDependencies": {
+    "esmify": "^2.1.1"
+  }
+}
