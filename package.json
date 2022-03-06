@@ -27,6 +27,7 @@
   "dependencies": {
     "browserify": "^16.5.1",
     "eslint": "^8.10.0",
+    "js-cookie": "^3.0.1",
     "watchify": "^4.0.0"
   },
   "devDependencies": {
