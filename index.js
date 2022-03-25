@@ -168,6 +168,7 @@ function readJson() {
     console.log(json);
     words_of_the_day.forEach(word => word.innerHTML = json.word);
     definition_of_the_day.innerHTML = json.definition;
+    textarea.placeholder = `Entrez ici votre définition du mot ${json.word}.`;
   }).catch(error => {
     console.log(error);
   });
