@@ -6,6 +6,20 @@ let yourDefinitionContainer = document.querySelector('.mdj__your-definition-wrap
 let button = document.querySelector('.mdj__button');
 let answer = document.querySelector('.mdj__answer');
 let question = document.querySelector('.mdj__question');
+let words_of_the_day = document.querySelectorAll('.mdj__title');
+let definition_of_the_day = document.querySelector('.mdj__definition-text');
+
+function readJson() {
+    fetch('./dictio.json').then((response) => response.json()).then(json => {
+        console.log(json);
+        words_of_the_day.forEach(word => word.innerHTML = json.word);
+        definition_of_the_day.innerHTML = json.definition;
+    }).catch(error => {
+        console.log(error);
+    });
+}
+
+readJson();
 
 if(Cookie.get("played") === "true") {
     answer.classList.remove("hide");
