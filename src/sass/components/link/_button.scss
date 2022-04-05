@@ -1,0 +1,48 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 8px;
+    vertical-align: middle;
+    user-select: none;
+    text-align: center;
+    font-family: $font-family-base;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &.btn--primary {
+        background-color: $brand-color;
+        color: $black;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $brand-color-light;
+        }
+    }
+
+    &.btn--secondary {
+        border: 1px solid $white;
+        color: $white;
+        background-color: transparent;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: $grey-light;
+        }
+    }
+    
+
+    &.btn--tertiary {
+        color: $black;
+        background-color: $white;
+    }
+}

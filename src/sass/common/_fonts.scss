@@ -1,0 +1,101 @@
+@at-root {
+
+    @font-face {
+        font-family: 'Comfortaa';
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Comfortaa-Light.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Comfortaa';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Comfortaa-Regular.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Comfortaa';
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Comfortaa-Medium.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Comfortaa';
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Comfortaa-SemiBold.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Comfortaa-Bold.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Montserrat-Light.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Montserrat-Regular.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Montserrat-Medium.ttf') format('ttf');
+    }
+    
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Montserrat-SemiBold.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Montserrat-Bold.ttf') format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Monserrat Black';
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src:
+            url('#{$resources-path}/Montserrat-Black.ttf') format('ttf');
+    }
+}

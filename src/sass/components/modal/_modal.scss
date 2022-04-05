@@ -1,0 +1,50 @@
+.modal {
+    padding: 42px;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $black;
+    transition: top 0.3s ease-in-out;
+
+    &--active {
+        top: 0;
+    }
+
+    &__close {
+        position: absolute;
+        cursor: pointer;
+        top: 16px;
+        right: 16px;
+    }
+
+    &__title, &__text, &__icon{
+        margin-bottom: 30px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__table {
+        margin: 20px 0;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid $white;
+    }
+
+    &__table-row {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__table-cell--title {
+        font-size: 20px;
+    }
+}

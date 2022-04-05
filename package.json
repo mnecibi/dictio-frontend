@@ -1,12 +1,12 @@
 {
-  "name": "lemotdujour",
+  "name": "dictio",
   "version": "1.0.0",
   "description": "Donner votre définition du mot du jour.",
-  "main": "sketch.js",
+  "private": true,
   "scripts": {
     "start": "live-server",
-    "dev": "watchify sketch.js -p esmify -o index.js",
-    "build": "browserify sketch.js -p esmify -o index.js"
+    "deploy": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "keywords": [
     "definition",
     "wordoftheday",
+    "dictio",
     "js",
     "lemotdujour"
   ],
@@ -25,12 +26,19 @@
   },
   "homepage": "https://github.com/mnecibi/lemotdujour#readme",
   "dependencies": {
-    "browserify": "^16.5.1",
-    "eslint": "^8.10.0",
     "js-cookie": "^3.0.1",
-    "watchify": "^4.0.0"
+    "local-storage": "^2.0.0"
   },
   "devDependencies": {
-    "esmify": "^2.1.1"
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "esbuild-loader": "^2.18.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.49.11",
+    "sass-loader": "^12.6.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2"
   }
 }

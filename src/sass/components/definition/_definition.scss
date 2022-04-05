@@ -1,0 +1,37 @@
+.cmp-definition {
+
+    &__title {
+        font-family: $font-family-title;
+        font-size: 28px;
+        color: $brand-color;
+    }
+
+    &__your-text {
+        margin-top: 40px;
+        border-radius: 8px;
+        border: 1px solid $white;
+        padding: 8px 15px;
+        position: relative;
+    }
+
+    &__your-text-label {
+        position: absolute;   
+        top: -10px;
+        left: 30px;
+        color: $brand-color;
+        background: $black;
+        font-weight: 400;
+        padding: 0 5px;
+    }
+
+    &__your-text-text {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    &__your-text-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

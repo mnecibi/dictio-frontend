@@ -1,0 +1,82 @@
+$resources-path: '../resources/fonts';
+
+@import 'fonts';
+@import 'colors';
+
+
+$spacer-base: .8rem; // 8px
+$spacers: (
+    0: 0,
+    1: (
+        $spacer-base,
+    ),
+    2: (
+        $spacer-base * 2,
+    ),
+    3: (
+        $spacer-base * 3,
+    ),
+    4: (
+        $spacer-base * 4,
+    ),
+    5: (
+        $spacer-base * 5,
+    ),
+    6: (
+        $spacer-base * 6,
+    ),
+    7: (
+        $spacer-base * 7,
+    ),
+    8: (
+        $spacer-base * 8,
+    ),
+    9: (
+        $spacer-base * 9,
+    ),
+    10: (
+        $spacer-base * 10,
+    ),
+    11: (
+        $spacer-base * 11,
+    ),
+    12: (
+        $spacer-base * 12,
+    ),
+    15: (
+        $spacer-base * 15,
+    ),
+    16: (
+        $spacer-base * 16,
+    ),
+);
+
+// type scale sizes
+$type-scale-sizes: (
+    alpha: 4.8rem, // 48px
+    beta: 4rem, // 40px
+    gamma: 3.2rem, // 32px
+    delta: 2.4rem, // 24px
+    epsilon: 2rem, // 20px
+    zelta: 1.6rem, // 16px -> html font-size: 62.5% (10px)
+    eta: 1.4rem, // 14px
+    theta: 1.2rem // 12px
+);
+
+// font sizes
+$font-sizes: $type-scale-sizes;
+
+// transitions
+$transition-duration: .2s;
+
+$font-family-base: 'Comfortaa', sans-serif;
+$font-family-title: 'Montserrat', sans-serif;
+$font-size-base: map-get($spacers, 1);
+
+$font-weight-base: 300;
+$line-height-base: 1.5;
+$body-color: $white;
+$body-bg: $black; // 2
+
+$headings-margin-bottom: map-get($spacers, 2);
+$paragraph-margin-bottom: map-get($spacers, 2);
