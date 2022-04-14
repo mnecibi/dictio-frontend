@@ -19,6 +19,7 @@ export default class Stats {
 
     update = function (word, yourDefinition) {
         word.yourDefinition = yourDefinition;
+        word.date = new Date();
 
         let stats = this.get();
         stats.playedGames++;

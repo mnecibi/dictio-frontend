@@ -5,56 +5,57 @@ import "./sass/main.scss";
 // TODO Use typescript
 
 import "./js/modal.js";
-import getResult from "./js/results";
+import {getResultPage, getResultModal, getStatsResultPage} from "./js/results";
 import Stats from "./js/stats";
 
-let wordObject = {};
+const init = () => {
+    let wordObject = {};
 
-const stats = new Stats();
+    const stats = new Stats();
 
-fetch('./dictio.json').then((response) => response.json()).then(json => {
-    wordObject = json;
+    fetch('./dictio.json').then((response) => response.json()).then(json => {
+        wordObject = json;
 
-    document.querySelector(".cmp-question__title").innerHTML = wordObject.word;
-    document.querySelector(".cmp-question__state").innerHTML = wordObject.state;
-    setStats();
+        document.querySelector(".cmp-question__title").innerHTML = wordObject.word;
+        document.querySelector(".cmp-question__state").innerHTML = wordObject.state;
+        setStats(stats);
 
-    if(stats.get().games && stats.get().games.length>0 && stats.get().games[stats.get().games.length - 1].word === wordObject.word) {
-        document.querySelector(".result").classList.remove("hide");
-        document.querySelector(".question").classList.add("hide");
-    }
+        if(stats.get().games && stats.get().games.length>0 && stats.get().games[stats.get().games.length - 1].word === wordObject.word) {
+            document.querySelector(".result").classList.remove("hide");
+            document.querySelector(".question").classList.add("hide");
+        }
 
-}).catch(error => {
-    console.log(error);
-});
-
-
-
-document.querySelector(".cmp-question__button").addEventListener('click', () => {
-    const textAreaValue = document.querySelector(".cmp-question__textarea").value;
-    if(textAreaValue) {
-        document.querySelector(".result").classList.remove("hide");
-        document.querySelector(".question").classList.add("hide");
-        stats.update(wordObject, textAreaValue)
-        setStats();
-    }
-});
+    }).catch(error => {
+        console.log(error);
+    });
 
 
-const setStats = function() {
-    const resultHTML = getResult(stats.get());
 
-    // TODO: Update result
+    document.querySelector(".cmp-question__button").addEventListener('click', (event) => {
+        event.preventDefault();
+        const textAreaValue = document.querySelector(".cmp-question__textarea").value;
+        if(textAreaValue) {
+            document.querySelector(".question").classList.add("hide");
+            stats.update(wordObject, textAreaValue);
+            setStats(stats);
+            document.querySelector(".modal-result").classList.add("modal--active");
+            document.querySelector(".result").classList.remove("hide");
+        }
+    });
+};
+
+
+const setStats = function(stats) {
+
     const resultComponent = document.querySelector(".result");
-    resultComponent.innerHTML = resultHTML;
+    resultComponent.innerHTML = getResultPage(stats.get());
 
-    // TODO: Update stats
+    const resultModal = document.querySelector(".modal-result .modal-wrapper");
+    resultModal.innerHTML = getResultModal(stats.get());
+
     const statsComponent = document.querySelector(".modal-stats .modal-wrapper");
-    statsComponent.innerHTML = `
-        <div class="cmp-separator">
-            <div class="cmp-separator__label-wrapper">
-                <div class="cmp-separator__label">Statistiques</div>
-            </div>
-        </div>
-        ${resultHTML}`;
+    statsComponent.innerHTML = getStatsResultPage(stats.get());
 }
+
+
+document.addEventListener('DOMContentLoaded', init);

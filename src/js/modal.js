@@ -9,7 +9,8 @@ const removeActiveModal = () => {
 
 document.querySelectorAll("[data-modal]").forEach(function (modalButton) {
 
-    modalButton.addEventListener("click", function() {
+    modalButton.addEventListener("click", function(event) {
+        event.preventDefault();
         removeActiveModal();
         const modalName = modalButton.getAttribute("data-modal");
         const modal = document.querySelector(`.${modalName}`);
@@ -18,7 +19,8 @@ document.querySelectorAll("[data-modal]").forEach(function (modalButton) {
 });
 
 document.querySelectorAll(".modal__close").forEach(function (closeButton) {
-    closeButton.addEventListener("click", function() {
+    closeButton.addEventListener("click", function(event) {
+        event.preventDefault();
         removeActiveModal();
     });
 });

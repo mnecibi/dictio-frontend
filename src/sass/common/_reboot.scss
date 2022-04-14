@@ -26,6 +26,8 @@ body {
     background-color: $body-bg; // 2
     letter-spacing: 1px;
     overflow: hidden;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 section {
@@ -91,7 +93,7 @@ button {
   textarea {
     margin: 0; // Remove the margin in Firefox and Safari
     font-family: inherit;
-    font-size: inherit;
+    font-size: $font-size-base;
     line-height: inherit;
   }
   
