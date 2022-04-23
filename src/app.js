@@ -5,7 +5,7 @@ import "./sass/main.scss";
 // TODO Use typescript
 
 import "./js/modal.js";
-import {getResultPage, getResultModal, getStatsResultPage} from "./js/results";
+import {getResultPage, getResultModal, getStatsResultPage, addCopyEvents} from "./js/results";
 import Stats from "./js/stats";
 
 const init = () => {
@@ -13,7 +13,7 @@ const init = () => {
 
     const stats = new Stats();
 
-    fetch('./dictio.json').then((response) => response.json()).then(json => {
+    fetch('./files/dictio.json').then((response) => response.json()).then(json => {
         wordObject = json;
 
         document.querySelector(".cmp-question__title").innerHTML = wordObject.word;
@@ -45,16 +45,18 @@ const init = () => {
 };
 
 
-const setStats = function(stats) {
+const setStats = async function(stats) {
 
     const resultComponent = document.querySelector(".result");
-    resultComponent.innerHTML = getResultPage(stats.get());
+    resultComponent.innerHTML = getResultPage(stats);
 
     const resultModal = document.querySelector(".modal-result .modal-wrapper");
-    resultModal.innerHTML = getResultModal(stats.get());
+    resultModal.innerHTML = getResultModal(stats);
 
     const statsComponent = document.querySelector(".modal-stats .modal-wrapper");
-    statsComponent.innerHTML = getStatsResultPage(stats.get());
+    statsComponent.innerHTML = getStatsResultPage(stats);
+
+    addCopyEvents(stats.get());
 }
 
 

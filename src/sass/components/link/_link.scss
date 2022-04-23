@@ -1,0 +1,9 @@
+a {
+    color: $brand-color;
+    text-decoration: none; 
+
+    &:hover {
+        color: $brand-color-light;
+        text-decoration: underline;
+    }
+}

@@ -2,12 +2,12 @@
     padding: 42px;
     position: absolute;
     min-height: -webkit-fill-available;
-    top: -100%;
+    top: -200%;
     bottom: 100%;
     left: 0;
     right: 0;
     background-color: $black;
-    transition: top 0.3s ease-in-out;
+    transition: top 0.4s ease-in-out;
     max-width: 600px;
     margin: 0 auto;
     padding: 30px 50px;
@@ -33,7 +33,6 @@
         justify-content: center;
         align-items: center;
     }
-
 
     &__table {
         margin: 20px 0;

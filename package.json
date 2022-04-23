@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/mnecibi/lemotdujour#readme",
   "dependencies": {
+    "date-fns": "^2.28.0",
     "js-cookie": "^3.0.1",
     "local-storage": "^2.0.0"
   },
