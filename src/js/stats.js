@@ -1,7 +1,7 @@
 'use strict';
 
 import ls from "local-storage";
-import {subDays, subDays, format, parseISO} from "date-fns";
+import {subDays, format, parseISO} from "date-fns";
 
 export default class Stats {
     constructor() {
@@ -45,14 +45,21 @@ export default class Stats {
 
     getCurrentStreak = function () {
         let games = this.getGames();
-        let dates = Object.values(games).filter(game => game.date).map(game => game.date);
+        let dates = Object.values(games)
+            .filter(game => game.date)
+            .map(game => game.date);
+
+        console.log(dates);
 
         let currentStreak = 0;
-        if (dates.length > 0) {
+        if (dates && dates.length > 0) {
             currentStreak = 1;
+        } else {
+            return 0;
         }
+
         let counter = dates.length - 1;
-        while (counter > 0 && this.sameDay(subDays(new Date(dates[counter]), 1), dates[counter - 1])) {
+        while (counter > 0 && this.sameDay(subDays(new Date(dates[counter]), 1), new Date(dates[counter - 1]))) {
             currentStreak++;
             counter--;
         }

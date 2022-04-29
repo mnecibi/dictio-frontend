@@ -15,6 +15,7 @@
     &:active {
         background-color: transparent;
         border-color: transparent;
+        text-decoration: none;
     }
 
     &.btn--primary {
@@ -42,7 +43,14 @@
     
 
     &.btn--tertiary {
+        font-weight: 500;
         color: $black;
         background-color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $grey-light;
+        }
     }
 }

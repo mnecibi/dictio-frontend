@@ -1,9 +1,23 @@
 .cmp-definition {
 
     &__title {
-        font-family: $font-family-title;
+        font-family: $font-family-definition;
         font-size: 28px;
         color: $brand-color;
+    }
+
+    &__state {
+        font-weight: 600;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    &__text {
+        font-size: 16px;
+
+        .modal-stats & {
+            font-size: 14px;
+        }
     }
 
     &__your-text {
@@ -22,16 +36,23 @@
         background: $black;
         font-weight: 400;
         padding: 0 5px;
+        font-size: 14px;
     }
 
     &__your-text-text {
         margin-top: 10px;
         margin-bottom: 30px;
+        text-align: left;
+        font-size: 13px;
     }
 
     &__your-text-button {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .result & {
+        text-align: center;
     }
 }
