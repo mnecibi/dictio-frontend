@@ -83,10 +83,7 @@ const getTextToCopy = function(stats) {
 
 ${lastDefinition.yourDefinition}
         
-Pour découvrir la vraie définition 👇
-        
-https://dictio.io`;
-
+Trouve la vraie définition sur https://dictio.io`;
 }
 
 const getResultPage = function(stats) {
@@ -148,7 +145,7 @@ const getResultModal = function(stats) {
             <div class="cmp-separator__label">Définition</div>
         </div>
     </div>
-    ${getResultPage(stats)}`;
+    ${getStatsLastDefinition(stats.getGames())}`;
 };
 
 export { getResultModal, getResultPage, getStatsResultPage, addCopyEvents };
