@@ -6,14 +6,14 @@
     <title>Dictio</title>
     <link rel="stylesheet" href="main.css">
     <meta property="og:url" content="https://dictio.io">
-    <meta property="og:title" content="Dictio: Le mot du jour">
-    <meta property="og:description" content="Jouez et partager votre définition du mot du jour et découvrez la définition du dictionnaire.">
-    <meta name="keywords" content="Dictio, dictio, DictioIO, Definition, Mot, Jeu, Français, Deviner, Culture, Quotidien, Nantes, Francophonie">
-    <meta property="og:site_name" content="Dictio: Le mot du jour">
+    <meta property="og:title" content="Dictio.io">
+    <meta property="og:description" content="Donnez votre définition du mot du jour et découvrez la définition du dictionnaire.">
+    <meta name="keywords" content="Dictio, dictio, DictioIO, Definition, Mot, Jeu, Français, Deviner, Culture, Quotidien, Nantes, Francophonie, Jour">
+    <meta property="og:site_name" content="Dictio.io">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
-    <meta name="twitter:title" content="Dictio: Le mot du jour">
-    <meta name="twitter:description" content="Jouez et partager votre définition du mot du jour et découvrez avec la définition du dictionnaire.">
+    <meta name="twitter:title" content="Dictio.io">
+    <meta name="twitter:description" content="Donnez votre définition du mot du jour et découvrez avec la définition du dictionnaire.">
     <meta name="theme-color" content="#212121">
     <meta name="msapplication-TileColor" content="#212121">
 </head>
@@ -83,11 +83,44 @@
     </header>
 
     <section class="question cmp-question">
-        <h1 class="cmp-question__title"></h1>
+        <h3 class="cmp-question__subtitle">Trouvez une <span>définition</span> du mot</h3>
+        <div class="cmp-question__title-wrapper">
+            <div class="cmp-question__title-icon cmp-question__title-icon--left-top">
+                <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 9.4641L11.5 7.73205L3.83975 1L0.839746 6.19615L10.5 9.4641Z" fill="#FFD600" stroke="#FFD600"/>
+                </svg>
+            </div>
+            <div class="cmp-question__title-icon cmp-question__title-icon--left-center">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 5V3L1 1V7L11 5Z" fill="#FFD600" stroke="#FFD600"/>
+                </svg>
+            </div>
+            <div class="cmp-question__title-icon cmp-question__title-icon--left-bottom">
+                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 0.732065L11.5 2.46412L3.83975 9.19617L0.839746 4.00001L10.5 0.732065Z" fill="#FFD600" stroke="#FFD600"/>
+                </svg>
+            </div>
+            <h1 class="cmp-question__title"></h1>
+            <div class="cmp-question__title-icon cmp-question__title-icon--right-top">
+                <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 9.4641L1 7.73205L8.66025 1L11.6603 6.19615L2 9.4641Z" fill="#FFD600" stroke="#FFD600"/>
+                </svg>
+            </div>
+            <div class="cmp-question__title-icon cmp-question__title-icon--right-center">
+                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 5V3L10.5 1V7L0.5 5Z" fill="#FFD600" stroke="#FFD600"/>
+                </svg>
+            </div>
+            <div class="cmp-question__title-icon cmp-question__title-icon--right-bottom">
+                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 0.732065L1 2.46412L8.66025 9.19617L11.6603 4.00001L2 0.732065Z" fill="#FFD600" stroke="#FFD600"/>
+                </svg>    
+            </div>
+        </div>
         <div class="cmp-question__state"></div>
-        <div class="cmp-question__label">Proposez une définition</div>
+        <div class="cmp-question__label">Saisissez votre réponse</div>
         <form class="cmp-question__form">
-            <textarea class="cmp-question__textarea" placeholder="Il n'y a pas de bonne ou de mauvaise réponse.." maxlength="250" required></textarea>
+            <textarea class="cmp-question__textarea" placeholder="N’hésitez pas à intégrer toutes les informations qui vous semblent pertinentes." maxlength="250" required></textarea>
             <button class="cmp-question__button btn btn--secondary" type="submit">Valider</button>
         </form>
     </section>

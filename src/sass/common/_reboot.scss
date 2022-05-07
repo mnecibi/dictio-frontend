@@ -37,7 +37,7 @@ section {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -179,4 +179,20 @@ button {
 
   .pt-30 {
     padding-top: 30px;
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .swiper-button-prev {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      cursor: pointer;
+      z-index: 1;
   }

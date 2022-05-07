@@ -1,12 +1,12 @@
 import "./sass/main.scss";
 
 
-// TODO Refactor import strategy
-// TODO Use typescript
-
 import "./js/modal.js";
 import {getResultPage, getResultModal, getStatsResultPage, addCopyEvents} from "./js/results";
 import Stats from "./js/stats";
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+Swiper.use([Navigation, Pagination]);
 
 const init = () => {
     let wordObject = {};
@@ -56,6 +56,14 @@ const setStats = async function(stats) {
     const statsComponent = document.querySelector(".modal-stats .modal-wrapper");
     statsComponent.innerHTML = getStatsResultPage(stats);
 
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
     addCopyEvents(stats.get());
 }
 

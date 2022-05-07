@@ -1,19 +1,110 @@
 .cmp-question {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: $white;
+        margin-bottom: 21px;
+        font-weight: 300;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
     &__title {
-        font-family: $font-family-title;
+        font-family: $font-family-definition;
+        font-weight: 600;
         font-size: 28px;
         color: $brand-color;
         text-align: center;
     }
 
+    &__title-wrapper {
+        position: relative;
+    }
+
+    &__title-icon {
+        position: absolute;
+
+        &--left-top {
+            top: -10px;
+            left: -23px;
+        }
+
+        &--left-center {
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            left: -25px;
+        }
+
+        &--left-bottom {
+            bottom: -10px;
+            left: -23px;
+        }
+
+        &--right-top {
+            top: -10px;
+            right: -23px;
+        }
+
+        &--right-center {
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            right: -23px;
+        }
+
+        &--right-bottom {
+            bottom: -10px;
+            right: -23px;
+        }
+    }
+
     &__state {
+        position: relative;
         font-weight: 600;
         margin-bottom: 30px;
+        margin-top: 7px;
         text-align: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 1px;
+            background: $brand-color;
+            right: -24px;
+            top: 50%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 1px;
+            background: $brand-color;
+            left: -24px;
+            top: 50%;
+        }
+    }
+
+    &__form {
+        width: 100%;
     }
 
     &__label {
+        width: 100%;
         font-size: 14px;
         font-weight: 300;
         margin-bottom: 12px;

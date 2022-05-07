@@ -1,19 +1,140 @@
 .cmp-definition {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--stats {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
     &__title {
         font-family: $font-family-definition;
         font-size: 28px;
         color: $brand-color;
     }
 
+    &__subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: $white;
+        margin-bottom: 21px;
+        font-weight: 300;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__date {
+        font-size: 18px;
+        color: $brand-color;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        display: none;
+
+        .swiper-slide & {
+            display: block;
+        }
+    }
+
+    &-subsection {
+
+        margin-bottom: 21px;
+
+        &__title {
+            font-size: 16px;
+            font-weight: 300;
+            color: $brand-color;
+            margin-bottom: 10px;
+        }
+
+        &__content {
+            font-size: 13px;
+        }
+    }
+
+    &__title-wrapper {
+        position: relative;
+    }
+
+    &__title-icon {
+        position: absolute;
+
+        &--left-top {
+            top: -10px;
+            left: -23px;
+        }
+
+        &--left-center {
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            left: -25px;
+        }
+
+        &--left-bottom {
+            bottom: -10px;
+            left: -23px;
+        }
+
+        &--right-top {
+            top: -10px;
+            right: -23px;
+        }
+
+        &--right-center {
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            right: -23px;
+        }
+
+        &--right-bottom {
+            bottom: -10px;
+            right: -23px;
+        }
+    }
+
     &__state {
+        position: relative;
         font-weight: 600;
         margin-bottom: 30px;
-        font-size: 16px;
+        margin-top: 7px;
+        text-align: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 1px;
+            background: $brand-color;
+            right: -24px;
+            top: 50%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 1px;
+            background: $brand-color;
+            left: -24px;
+            top: 50%;
+        }
     }
 
     &__text {
         font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 15px;
 
         .modal-stats & {
             font-size: 14px;
@@ -21,7 +142,9 @@
     }
 
     &__your-text {
+        width: 100%;
         margin-top: 40px;
+        margin-bottom: 20px;
         border-radius: 8px;
         border: 1px solid $white;
         padding: 8px 15px;

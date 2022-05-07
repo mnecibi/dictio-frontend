@@ -49,8 +49,6 @@ export default class Stats {
             .filter(game => game.date)
             .map(game => game.date);
 
-        console.log(dates);
-
         let currentStreak = 0;
         if (dates && dates.length > 0) {
             currentStreak = 1;
