@@ -1,5 +1,7 @@
 # LE MOT DU JOUR
+
 https://dictio.io
+
 Give your definition of the word of the day.
 
 ![](./Screenshot.png)
