@@ -38,10 +38,9 @@ const init = () => {
     });
 
     document.querySelector(".cookie-banner__btn").addEventListener("click", acceptCookies);
-    document.querySelector(".header__icon").forEach(icon => icon.addEventListener("click", acceptCookies));
+    document.querySelectorAll(".header__icon").forEach(icon => icon.addEventListener("click", acceptCookies));
 
     document.querySelector(".cmp-question__button--valider").addEventListener('click', (event) => {
-        event.preventDefault();
         acceptCookies();
         const textAreaValue = document.querySelector(".cmp-question__textarea").value;
         if(textAreaValue) {
