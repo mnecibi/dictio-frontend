@@ -1,0 +1,36 @@
+.cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.cookie-banner__wrapper {
+    background-color: $brand-color;
+    border-radius:  5px;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.cookie-banner__text {
+    color: $black;
+    font-size: 10px;
+}
+
+.btn.cookie-banner__btn {
+    background-color: $black;
+    color: $white;
+    border-radius: 20px;
+    height: 36px;
+
+    &:hover {
+        background-color: #000;
+        color: $white;
+    }
+}
