@@ -1,22 +1,27 @@
-# LE MOT DU JOUR
+# DICTIO - Le mot du jour
+
 Give your definition of the word of the day.
 
-![](./Screenshot.png)
+![web_app_view](./screenshot.png)
 
 ## First use
+
 Install necessary node modules
-```shell
+
+```bash
 npm install
 ```
 
 ## Usage
+
 Build project
-```shell
-npm run build
+
+```bash
+npm run deploy
 ```
 
-
 Start server
-```shell
+
+```bash
 live-server
 ```
