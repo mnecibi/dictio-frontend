@@ -13,6 +13,4 @@ FROM nginx:latest
 
 WORKDIR /usr/share/nginx/html
 
-COPY --from=builder /build/index.html /usr/share/nginx/html/
-COPY --from=builder /build/style.css /usr/share/nginx/html/
-COPY --from=builder /build/index.js /usr/share/nginx/html/
+COPY --from=builder /build/dist /usr/share/nginx/html/
